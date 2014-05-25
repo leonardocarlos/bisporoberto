@@ -1,0 +1,19 @@
+/* Custom Login Styles */
+body.login {background:#287DB3; height:100%;}
+
+/* logo */
+.login h1 a { background: url('../images/logomarca.png') no-repeat; background-size:auto; width: 318px; height: 145px; margin:0 auto}
+
+/* messages */
+.message { background:#fff; color:#C00 }
+.login #login_error { background-color:#fff; border-color:#c00; color:#c00}
+
+/* login form */
+.login label { color:#287DB3 }
+.login input { color:#287DB3 }
+.login .button-primary { border-color:#287DB3; font-weight: bold; color: white; background: #287DB3; text-shadow: rgba(0, 0, 0, 0.3) 0 -1px 0; }
+
+/* links below login forms */
+.login #nav, .login #backtoblog {text-shadow: #ccc 0 1px 0!important;padding: 8px;}
+.login #nav a, .login #backtoblog a {color:#fff!important; text-decoration:none}
+.login #nav a:hover, .login #backtoblog a:hover {color:#CCC!important;}

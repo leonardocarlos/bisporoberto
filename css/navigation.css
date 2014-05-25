@@ -1,0 +1,148 @@
+
+
+/* = navigation.css
+--------------------------------------------------- */
+
+/* = Layout
+--------------------------------------------------- */
+#menubar {
+	height: 45px;
+	float: right;
+	width: 650px;
+	margin-top: 15px;
+	                   /*------borda arredondada---------*/
+    border-radius: 5px; /* CSS 3 */
+    -o-border-radius: 5px; /* Opera */
+    -icab-border-radius: 5px; /* iCab */
+    -khtml-border-radius: 5px; /* Konqueror */
+    -moz-border-radius: 5px; /* Firefox */
+    -webkit-border-radius: 5px; /* Safari */ 
+	behavior: url(PIE.htc); /* Comportamento adicionado para renderização das propriedades acima no IE 7 e IE 8 */
+}
+#menubar h3 {
+	display: none;
+}
+#menubar ul {
+	display: block;
+	height: 29px;
+	margin: 0 0 0 5px;
+	padding: 4px 0;
+	list-style: none;
+}
+#menubar ul li {
+	display: block;
+	margin: 0;
+	padding: 0 2px 0 0;
+	float: left;
+	height: 29px;
+}
+#menubar ul ul {
+	position: absolute;
+	display: none;
+	width: 180px;
+	height: auto;
+	float: none;
+	margin: 2px 0 0 0;
+	padding: 5px 0;
+	z-index: 9999999;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+#menubar ul li a {
+	display: block;
+	position: relative;
+	margin: 0;
+	padding: 0 20px;
+	height: 29px;
+}
+
+#menubar ul li:hover ul,
+#menubar ul li.hover ul {
+	display: block;
+	z-index: 999999;
+	float: none;
+}
+#menubar ul ul li {
+	padding: 0;
+	margin: 0;
+	float: none;
+	width: auto;
+	height: auto;
+}
+#menubar ul ul li a {
+	float: none;
+	width: auto;
+	height: auto;
+	padding: 5px 20px;
+}
+#menubar ul ul ul {
+	margin: -31px 0 0 15px;
+}
+
+
+/* Colors and Images
+-----------------------------------------*/
+#menubar {
+	background: #207ce5 url('../images/bg_title.png') left top repeat-x;
+}/* 
+#menubar ul {
+	background: transparent url('../img/bg-menubar.png') right top no-repeat;
+} */
+#menubar ul li {
+	background: transparent url('../images/bg-menubar-item-1.png') right center no-repeat;
+}
+#menubar ul li:last-child {
+	background: transparent none;
+}
+#menubar ul li li {
+	background: transparent none;
+}
+#menubar ul ul {
+	background: #0059ac none;
+}
+#menubar ul li a {
+	color: #fff;
+}
+#menubar ul li:hover a,
+#menubar ul li.hover a,
+#menubar ul li.current-menu-item a,
+#menubar ul li.current_page_item a {
+	color: #feee00; 
+}
+#menubar ul li:hover ul li a,
+#menubar ul li.hover ul li a {
+	color: #fff;
+}
+#menubar ul li:hover ul li:hover a,
+#menubar ul li.hover ul li.hover a,
+#menubar ul li:hover ul li.current-menu-item a,
+#menubar ul li.hover ul li.current-menu-item a,
+#menubar ul li:hover ul li.current_page_item a,
+#menubar ul li.hover ul li.current_page_item a {
+	color: #feee00; text-decoration: underline;
+}
+#menubar ul li:hover ul li:hover ul li a,
+#menubar ul li.hover ul li.hover ul li a {
+	color: #feee00; text-decoration: underline;
+}
+#menubar ul li:hover ul li:hover ul li:hover a,
+#menubar ul li.hover ul li.hover ul li.hover a,
+#menubar ul li:hover ul li:hover ul li.current-menu-item a,
+#menubar ul li.hover ul li.hover ul li.current-menu-item a,
+#menubar ul li:hover ul li:hover ul li.current_page_item a,
+#menubar ul li.hover ul li.hover ul li.current_page_item a {
+	color: #feee00; text-decoration: underline;
+}
+
+/* Typography
+-----------------------------------------*/
+#menubar ul li {
+	font: bold 11px/14px 'Lucida Sans', sans-serif; text-transform:uppercase;
+}
+#menubar ul li a {
+	text-decoration: none;
+}
+#menubar ul ul li {
+	font: bold 11px/14px 'Lucida Sans', sans-serif; text-transform:uppercase;
+}

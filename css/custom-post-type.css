@@ -1,0 +1,25 @@
+/* some basic styling */
+
+.galvidpre {
+  	width:280px;
+  	height:250px;
+  	float:left;
+	margin:5px;
+ 	background-color: #EBEBEB;
+    border: 1px solid #EBEBEB;
+    padding: 3px;
+    box-shadow: 2px 2px 2px #cccccc;
+}
+
+.galvidprevid {
+  width:280px;
+}
+
+.galvidpretext {
+  width:260px;
+  padding:10px;
+}
+
+iframe{
+	margin:0;
+}

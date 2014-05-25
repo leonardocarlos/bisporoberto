@@ -1,0 +1,467 @@
+@charset utf-8;
+/*
+Theme Name: Bispo Roberto Amaral
+Theme URI: http://bisporobertoamaral.com/
+Author: Léo Artes - Comunicação & Web
+Author URI: http://leoartes.com.br/
+Description: Blog oficial do Bispo Roberto Amaral.
+Version: 1.0
+
+*/
+
+@import 'css/navigation.css';
+@import 'css/custom-post-type.css';
+@import 'url(http://fonts.googleapis.com/css?family=Magra)';
+
+/* Resetar estilos */
+* { padding: 0; margin: 0;}
+
+/* Definições gerais */
+.fl { float: left;}
+.fr { float: right;}
+.bl { display: block;}
+.cls { clear: both;}
+img {border: none;}
+figure {float: left;}
+.center{text-align:center;}
+
+a {
+text-decoration: none;
+color: #069;
+-webkit-transition: color .3s linear;
+-o-transition: color .3s linear;
+-moz-transition: color .3s linear;
+}
+a:visited, a:focus { color: #069;}
+a:hover, a:active { color: #c00;}
+
+ul{list-style-type:none;}
+li{list-style-type:none;}
+/*
+h1, h2 { font-family: trebuchet-ms, sans-serif; font-weight: normal; border-bottom: 1px solid #ccc; padding-bottom: 10px;}
+h1 { font-size: 22pt;}
+h2 { font-size: 18pt;}
+h3 { box-shadow: 2px 2px 2px #575454; } */
+
+/* Formulário */
+input {
+    border: 1px solid #cccccc;
+    font-family: "Helvetica", "Trebuchet MS", Arial, sans-serif;
+    color: #777;
+    padding: 3px;
+
+    background: #fefefe;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fefefe', endColorstr='#eeeeee'); /* IE */
+    background: -webkit-gradient(linear, left top, left bottom, from(#fefefe), to(#eeeeee)); /* webkit browsers */
+    background: -moz-linear-gradient(top,  #fefefe,  #eeeeee); /* Firefox 3.6+ */
+	behavior: url(PIE.htc); /* Comportamento adicionado para renderização das propriedades acima no IE 7 e IE 8 */
+}
+
+.labelform{
+    font-size: 8pt;
+    font-weight: bold;
+    color: #a70329;
+}
+	#submit { background: #EEE;}
+
+/* 2 - Estrutura */
+body { text-align: center; font: normal 9pt tahoma, sans-serif; line-height: 16pt; background: #eeeeee url('images/bg_header.jpg') no-repeat top center;}
+
+#page-wrap, #footer { margin: 0 auto; text-align: left; width: 100%}
+#page-wrap, #header, #menu, #container  { width: 940px;}
+#header, #menu, #container, #content, #footer { float: left;}
+#sidebar {float: right;}
+
+#header { padding: 0px 0 10px 0; height: 250px;}
+	#header p, #header span { margin-left: 10px;}
+	#header p { font: bold 14pt arial;}
+	#header a { color: #fff;}
+	#header a:hover { color: #fff;}
+
+        .logo{
+            float: left;
+            width: 260px;
+            padding-top: 25px;
+            margin-left: 5px;
+        }
+        #slogan{
+        float:right;
+        width: 600px;
+		margin-top: 10px;
+        margin-right: 20px;
+		text-align: center;
+        }
+        .descricao{
+            text-shadow: 2px 2px 2px #000;
+            font: 20pt 'Kaushan Script', cursive;
+            text-align: center;
+        }
+
+
+        /* Inicio Menus drop-down */
+#links_bar {
+ background: #207ce5 url('images/bg_title.png') left top repeat-x;
+ width: 600px;
+ float: right;
+ height: 40px;
+ padding-left: 10px;
+ margin-bottom: 10px;
+ color: #ccc;
+ z-index: 1000;
+ 	                   /*------borda arredondada---------*/
+    border-radius: 5px; /* CSS 3 */
+    -o-border-radius: 5px; /* Opera */
+    -icab-border-radius: 5px; /* iCab */
+    -khtml-border-radius: 5px; /* Konqueror */
+    -moz-border-radius: 5px; /* Firefox */
+    -webkit-border-radius: 5px; /* Safari */
+	behavior: url(PIE.htc); /* Comportamento adicionado para renderização das propriedades acima no IE 7 e IE 8 */
+}
+
+#links_bar ul {list-style: none; margin: 0; padding: 0; line-height: 30px; z-index:99999; }
+
+/* Menu Principal */
+#links_bar li a, #links_bar li a:visited {
+ font: medium 12px/24px 'Ubuntu', Arial, Helvetica, sans-serif; text-transform:uppercase;
+ text-align: center;
+ display: block;
+ text-decoration: none;
+ color: #fff;
+ padding: 0px 9px 0 9px;
+ margin: 0px 5px 0 0;
+ line-height: 40px;
+ z-index: 1000;
+}
+#links_bar li a:hover,
+#links_bar li a:visited:hover{
+ color: #feee00;
+ text-decoration: none;
+ background: #207ce5;
+}
+
+/* Sub-menus */
+#links_bar li ul li a, #links_bar li ul li a:visited {
+ font: medium 12px/24px 'Ubuntu', Arial, Helvetica, sans-serif;
+ width: 180px;
+ text-align: left;
+ display: block;
+ text-decoration: none;
+ color: #fff;
+ padding: 0px 9px 0 9px;
+ margin: 0px 5px 0 0;
+ line-height: 30px;
+ background: #207ce5;
+ z-index: 1000;
+
+}
+#links_bar li ul li a:hover, #links_bar li ul li a:visited:hover {
+ color: #990000;
+ text-decoration: none;
+ background-color: #fff;
+}
+
+#links_bar li ul {position: absolute; visibility: hidden; list-style: none; }
+#links_bar li:hover ul, #links_bar li.hover ul {visibility: visible;}
+#links_bar li:hover ul ul, #links_bar li.hover ul ul {visibility: hidden;}
+#links_bar li li:hover ul, #links_bar li li.hover ul {visibility: visible;}
+#links_bar li li:hover ul ul, #links_bar li li.hover ul ul {visibility: hidden;}
+#links_bar li li li:hover ul, #links_bar li li li.hover ul {visibility: visible;}
+
+#links_bar li {float: left;}
+#links_bar li ul li {float: none;}
+/* Fim Menus drop-down */
+
+#container { background: #fff; padding-top: 10px; box-shadow: 3px 3px 3px #666; margin-bottom: 15px;
+                   /*------borda arredondada---------*/
+    border-radius: 5px; /* CSS 3 */
+    -o-border-radius: 5px; /* Opera */
+    -icab-border-radius: 5px; /* iCab */
+    -khtml-border-radius: 5px; /* Konqueror */
+    -moz-border-radius: 5px; /* Firefox */
+    -webkit-border-radius: 5px; /* Safari */
+}
+
+#content { width: 610px; margin-left: 5px; margin-bottom: 10px; }
+	.post { margin-bottom: 40px;}
+	.post h1, .post h2, .post h3 { margin-bottom: 5px; font: 20pt 'Concert One', cursive;}
+	.post div a { text-decoration: underline;}
+	.post-utility{clear: both;}
+	.entry { margin: 15px 0;}
+	.entry p { margin-bottom: 15px;}
+
+#content-full { width: 900px; padding: 20px; background: #fff;}
+
+/* Comentários */
+.commentlist { margin: 10px 0 30px 0;}
+.commentlist li { list-style: none;}
+.commentlist li ul { margin-left: 20px;}
+
+.commentlist li .comment-body { background: #eee; padding: 10px; margin-bottom: 10px;}
+
+.commentlist img { float: left; margin: 5px;}
+.commentlist p { clear: both; margin: 15px 0; color: #555;}
+
+.reply { text-align: right;}
+
+#commentform { margin-top: 15px;}
+#commentform p { margin-bottom: 7px;}
+
+.error { font-weight: bold; color: #c22;}
+
+/* Navegação */
+#navigation a { background: #c22; color: #eee; padding: 4px;}
+#navigation a:hover { background: #fc7; color: #333;}
+
+/* Arquivo */
+#archive { margin-bottom: 25px; border: 0;}
+#archive span { color: #c22; text-decoration: underline;}
+
+#sidebar{ width: 290px; margin-right: 20px; }
+	#sidebar ul { margin-bottom: 20px;}
+	#sidebar ul li ul { margin: 0;}
+	#sidebar li { list-style: none;}
+	#sidebar a { color: #777;}
+	#sidebar a:hover { color: #222;}
+
+	#sidebar ul li { color: #000; padding: 4px;}
+	#sidebar ul li ul li { background: #fff; padding: 5px;}
+
+	#searchform {padding: 15px; text-align: center;}
+		#searchsubmit { background: #cf0100; color: #ffe; border: 0; font-weight: bold; padding: 4px 10px;}
+
+#footer { padding: 10px 0; font-size: 8pt; color: #fff; background: #cc0000 url('images/bg_footer.jpg') repeat-x top; }
+	#footer a { color: #fff;}
+	#footer a:hover { color: navy;}
+
+/* WordPress */
+.aligncenter, div.aligncenter { display: block; margin-left: auto; margin-right: auto;}
+.alignleft { float: left;}
+.alignright { float: right;}
+.wp-caption { background-color: #f3f3f3; border: 1px solid #ddd; -khtml-border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; margin: 10px; padding-top: 4px; text-align: center;}
+.wp-caption img { border: 0 none; margin: 0; padding: 0;}
+.wp-caption p.wp-caption-text { font-size: 11px; line-height: 17px; margin: 0; padding: 0 4px 5px;}
+
+
+        /* DESTAQUES */
+
+#destaques{
+	background-color: #FFFFFF;
+    width: 600px;
+    height: 280px;
+    margin-bottom: 10px;
+    border: 4px #fff solid;
+    box-shadow: 2px 2px 2px #ccc;
+	float: left;
+	behavior: url(PIE.htc); /* Comportamento adicionado para renderização das propriedades acima no IE 7 e IE 8 */
+		                   /*------borda arredondada---------*/
+    border-radius: 5px; /* CSS 3 */
+    -o-border-radius: 5px; /* Opera */
+    -icab-border-radius: 5px; /* iCab */
+    -khtml-border-radius: 5px; /* Konqueror */
+    -moz-border-radius: 5px; /* Firefox */
+    -webkit-border-radius: 5px; /* Safari */
+}
+#destaques2{
+    background-color: #FFFFFF;
+    width: 300px;
+    height: 280px;
+    margin-bottom: 10px;
+    border: 4px #fff solid;
+    box-shadow: 2px 2px 2px #ccc;
+    float: right;
+    margin-right: 10px;
+    behavior: url(PIE.htc); /* Comportamento adicionado para renderização das propriedades acima no IE 7 e IE 8 */
+		                   /*------borda arredondada---------*/
+    border-radius: 5px; /* CSS 3 */
+    -o-border-radius: 5px; /* Opera */
+    -icab-border-radius: 5px; /* iCab */
+    -khtml-border-radius: 5px; /* Konqueror */
+    -moz-border-radius: 5px; /* Firefox */
+    -webkit-border-radius: 5px; /* Safari */
+}
+#bemvindo{
+    float: left;
+    width: 500px;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    text-transform: uppercase;
+    clear: both;
+}
+
+.title{
+    font:  bold 15px/29px 'Ubuntu', sans-serif;
+    text-transform:uppercase;
+    color: #990000;
+    padding-left: 5px;
+    height: 30px;
+}
+
+.bgsombra{
+    background-color: #f3f3f3;
+    width: 600px;
+    box-shadow: 2px 2px 2px #000;
+	behavior: url(PIE.htc); /* Comportamento adicionado para renderização das propriedades acima no IE 7 e IE 8 */
+}
+
+.leiamais { float: right; background: url('images/button-read-more.png') no-repeat; padding: 1px; width: 70px; height: 22px; text-align: center; margin-top: 10px;}
+
+.leiamais a{text-decoration: none; color: #fff;}
+.leiamais a:hover {text-decoration: underline; color: #fff;}
+
+#redes{
+    float: right;
+    width: 300px;
+    height: 35px;
+    text-align: right;
+    margin-top: 10px;
+    margin-right: 20px;
+}    
+
+#noticias{
+	float: right;
+	width: 595px;
+    clear: both;
+    margin-bottom: 10px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+#data{
+	width: 50px;
+	height: 60px;
+    text-transform: uppercase;  	
+    color: #9c0b2a;
+    font: bold 20px 'Ubuntu', sans-serif;
+    text-align:center;
+    padding: 5px;
+    float: left;
+    margin: 15px 0 0;
+}
+
+.thumbnail{
+    border: 3px solid #FFFFFF;
+    box-shadow: 2px 2px 2px #cccccc;
+    float: left;
+    margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+#thumbnail{
+	width: 90px;
+	float: left;
+}
+
+#resumo{
+	width: 350px;
+	float: right;
+	padding: 5px;
+}
+
+.thumbnail_right{
+    border: 1px solid #cccccc;
+    padding: 3px;
+    box-shadow: 2px 2px 2px #cccccc;
+    margin-right: 8px;   
+behavior: url(PIE.htc); /* Comportamento adicionado para renderização das propriedades acima no IE 7 e IE 8 */	 
+}
+.thumbnail_left{
+    border: 1px solid #cccccc;
+    padding: 3px;
+    box-shadow: 2px 2px 2px #cccccc;
+    margin-left: 8px;    
+behavior: url(PIE.htc); /* Comportamento adicionado para renderização das propriedades acima no IE 7 e IE 8 */	
+}
+
+/* rodape */
+#centerrodape{
+    width: 960px;
+    margin: 0 auto;
+}
+
+.textorodape{
+    float: left;
+    width: 600px;
+    padding-left: 10px;
+    height: 30px;
+    text-align: left;
+}
+
+#logorodape{
+    float: right;
+    width: 300px;
+	height: 40px;
+    position: relative;
+    margin-right: 10px;
+}   
+
+/* Colunas */
+.colunas{
+    background-color: #f3f3f3;
+    box-shadow: 2px 2px 2px #ccc;  
+	behavior: url(PIE.htc); /* Comportamento adicionado para renderização das propriedades acima no IE 7 e IE 8 */	
+}
+
+#middle{
+    background-color: #f3f3f3;
+	display: table;
+	width: 100%;
+	padding-top:5px;
+	margin-bottom: 10px;
+}
+
+#sidebottom1{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#coluna1{
+    width: 550px;
+    float: left;
+    position: relative;
+    margin-bottom: 10px;    
+} 
+
+#coluna2{
+    width: 340px;
+    float: right;
+    position: relative;
+    margin-bottom: 10px;
+    padding:5px;   
+}
+
+#col1{
+    width: 270px;
+    padding: 10px;
+    float: left;
+    position: relative;
+    margin-bottom: 10px;    
+}    
+#col2{
+    width: 270px;
+    padding: 10px;
+    margin-left: 15px;	
+    float: left;
+    position: relative;    
+}
+#col3{
+    width: 270px;
+    padding: 10px;
+    float: right;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+#loop{
+	display:table;
+}
+
+#right{
+    background-color: #f3f3f3;
+    box-shadow: 2px 2px 2px #ccc;  
+    width: 270px;
+    padding: 10px;
+    float: right;
+    position: relative;
+    margin-bottom: 10px;
+	behavior: url(PIE.htc); /* Comportamento adicionado para renderização das propriedades acima no IE 7 e IE 8 */
+}
