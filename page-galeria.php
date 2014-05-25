@@ -2,11 +2,11 @@
 <?php get_header(); ?>
 <div id="container">
 <div id="content-full">
-<?php the_breadcrumb(); ?><br />	 
+<?php the_breadcrumb(); ?><br />
 
 					<div class="post">
 						<h1><a href="#">Galeria de Videos</a></h1>
-                        
+
      <?php /* Loop the stuff from the videos post type */
           $args = array( 'post_type' => 'videos', 'posts_per_page' => 12 );
           $loop = new WP_Query( $args );
@@ -19,7 +19,7 @@
 				$videoid = get_post_meta($post->ID, "Video ID", single);
 				if ($videosite == youtube) {
   				echo '<iframe width="280" height="190" src="http://www.youtube.com/embed/'.$videoid.'?rel=0" frameborder="0" allowfullscreen></iframe>';
-				} else if ($videosite == vimeo) {	
+				} else if ($videosite == vimeo) {
   				echo '<iframe src="http://player.vimeo.com/video/'.$videoid.'" width="280" height="190" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>';
 				} else {
   				echo 'Please Select Video Site Via the CMS';
@@ -36,11 +36,11 @@
 					<!-- Links de Compartilhamento -->
                     </p>
                </div><!-- .galvidpretext -->
-</div><!-- .galvidpre -->                  
+</div><!-- .galvidpre -->
      <?php endwhile;?>
      <?php post_pagination();?>
      </div><!-- .post -->
-       
+
      </div><!-- content-full -->
-     
+
 <?php get_footer(); ?>

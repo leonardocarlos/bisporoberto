@@ -1,4 +1,4 @@
-<?php 
+<?php
 if ( has_post_format( 'video' ) ) {
    // Include com layout para videos
    include( TEMPLATEPATH . '/content-video.php' );
@@ -13,12 +13,12 @@ if ( has_post_format( 'video' ) ) {
 
 }elseif ( has_post_format( 'quote' ) ) {
    // Include com layout para Notas
-    include( TEMPLATEPATH . '/content-niver.php' );	
-   
+    include( TEMPLATEPATH . '/content-niver.php' );
+
 } else {
 
 // include( TEMPLATEPATH . '/content-single.php' );
 
 get_template_part( 'content', get_post_format() );
 
-}?>  
+}?>
