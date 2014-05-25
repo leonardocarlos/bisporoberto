@@ -1,2 +1,5 @@
 [21-May-2013 08:57:45 America/Sao_Paulo] PHP Fatal error:  Call to undefined function get_header() in /home/roberto/public_html/wp-content/themes/bisporoberto/index.php on line 1
 [22-Jan-2014 19:31:36 America/Sao_Paulo] PHP Fatal error:  Call to undefined function get_header() in /home/roberto/public_html/wp-content/themes/bisporoberto/404.php on line 1
+
+
+
