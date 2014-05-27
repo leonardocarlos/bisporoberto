@@ -7,7 +7,7 @@
             <div class="textorodape">
               <a href="<?php bloginfo( 'url' ); ?>"><?php bloginfo( 'name' ); ?></a> - 
               <a href="<?php bloginfo( 'url' ); ?>/wp-admin"  target="_blank" title="Acessar o administrador do Site">Copyright</a>
-               <?php echo comicpress_copyright(); ?> - Todos os Direitos Reservados<br />
+               <?php echo comicpress_copyright(); ?> <a href="https://plus.google.com/111183586712583235525" rel="publisher">-</a> Todos os Direitos Reservados<br />
                 
             </div>					
                 <div id="logorodape">
